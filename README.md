@@ -1,0 +1,1 @@
+This is an example/prototype of running a NextJS inside of HarperDB. This can be installed or run as a HarperDB application by git cloning this, npm installing and running `harperdb run /path/to/next-template`. You can then visit http://localhost:9926/ and see the entry page.
