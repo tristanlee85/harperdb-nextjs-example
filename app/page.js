@@ -1,25 +1,9 @@
-import styles from './page.module.css'
-const { Dog } = tables;
+import Link from "next/link";
 
-export default async function Home() {
-  let dogs = [];
-  // get a list of dogs to render. note that nextjs's rendering doesn't (yet) support async iterators, so
-  // we have to accumulate these first
-  for await (let dog of Dog.search({})) {
-    dogs.push(dog);
-  }
+export default async function Page() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Here are some dogs:
-          <ul>
-            {dogs.map((dog) => (
-               <li>{dog.name}</li>
-            ))}
-          </ul>
-        </p>
-      </div>
-    </main>
+    <section>
+      <p>Check out the <Link href="/dogs">Dogs</Link> page to get started.</p>
+    </section>
   )
 }
