@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	experimental: {
-		workerThreads: true
+	webpack: (config) => {
+		config.externals.push({
+			"harperdb": "commonjs harperdb"
+		})
+
+		return config;
 	}
 }
 

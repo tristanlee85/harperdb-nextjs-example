@@ -13,6 +13,7 @@ export default async function Dog({ params }) {
 	return (
 		<section>
 			<h1>{dog.name}</h1>
+			<p>Breed: {dog.get('breed')}</p>
 			<p>Woof!</p>
 		</section>
 	)

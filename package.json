@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "harperdb run ./",
+    "dev": "harperdb-nextjs dev",
+    "build": "harperdb-nextjs build",
+    "start": "harperdb-nextjs start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@harperdb/nextjs": "file://Users/ethan/dev/harperdb/nextjs",
+    "@harperdb/nextjs": "file:../nextjs",
     "harperdb": "^4.3.21",
     "next": "^14.2.5",
     "react": "^18",

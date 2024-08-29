@@ -1,9 +1,7 @@
 graphqlSchema:
   files: '*.graphql'
+jsResource:
+  files: './resources.js'
 '@harperdb/nextjs':
   package: '@harperdb/nextjs'
-  prebuilt: false
-  dev: true
-  debug: true
-  port: 3000
   files: '/*'
