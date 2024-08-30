@@ -9,15 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@harperdb/nextjs": "file:../nextjs",
+    "@harperdb/nextjs": "^0.0.2",
     "harperdb": "^4.3.21",
     "next": "^14.2.5",
     "react": "^18",
     "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@types/node": "22.5.1",
-    "@types/react": "18.3.4",
-    "typescript": "5.5.4"
   }
 }
