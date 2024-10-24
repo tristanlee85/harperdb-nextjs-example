@@ -1,4 +1,4 @@
-import { getDog, listDogs } from "@/app/actions";
+import { getDog, listDogs } from '@/app/actions';
 
 export async function generateStaticParams() {
 	const dogs = await listDogs();
@@ -7,7 +7,6 @@ export async function generateStaticParams() {
 }
 
 export default async function Dog({ params }) {
-
 	const dog = await getDog(params.id);
 
 	return (
@@ -16,5 +15,5 @@ export default async function Dog({ params }) {
 			<p>Breed: {dog.get('breed')}</p>
 			<p>Woof!</p>
 		</section>
-	)
+	);
 }

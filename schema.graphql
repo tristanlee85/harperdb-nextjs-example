@@ -1,5 +1,5 @@
 type Dog @table @export {
-    id: ID @primaryKey
-    name: String
-    breed: String
+	id: ID @primaryKey
+	name: String
+	breed: String
 }
