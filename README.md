@@ -1,1 +1,22 @@
-This is an example/prototype of running a NextJS inside of HarperDB. This can be installed or run as a HarperDB application by git cloning this, npm installing and running `harperdb run /path/to/next-template`. You can then visit http://localhost:9926/ and see the entry page.
+# HarperDB Next.js Example
+
+This is an example of how to use [`@harperdb/nextjs`](https://github.com/HarperDB-Add-Ons/nextjs) to develop a Next.js application with HarperDB.
+
+The Next.js application can interact with the database through the [Resource API](https://docs.harperdb.io/docs/technical-details/reference/resource) directly instead of relying on network operations. This is significantly more efficient and enables a better application development experience.
+
+## Get Started
+
+1. Clone this repo locally
+2. Run `npm install`
+   1. If HarperDB is already installed on your machine (we recommend it be [installed globally](https://docs.harperdb.io/docs/getting-started#installing-a-harperdb-instance)), then run `npm link harperdb`.
+3. Run `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000) 🎉
+
+## How does it work?
+
+This example in and of itself is a [HarperDB Component](https://docs.harperdb.io/docs/developers/components), and is reliant on the `@harperdb/nextjs` protocol extension component in order to access to the [HarperDB Globals](https://docs.harperdb.io/docs/technical-details/reference/globals). The globals are only available on server-side code paths such as [server actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations) and [server components](https://nextjs.org/docs/app/building-your-application/rendering/server-components). Any code paths using HarperDB globals must first import the `harperdb` package (i.e. `import('harperdb')`).
+
+> [!TIP] 
+> Use the `harperdb-nextjs` CLI (part of the `@harperdb/nextjs` package) to replace the Next.js CLI. For example, `next dev` becomes `harperdb-nextjs dev`. This CLI handles running HarperDB and providing sensible configuration values for the `@harperdb/nextjs` component.
+
+Based on Next.js best practices, it is recommended to use this in **server actions** so that server _and client_ components can both access the same functions. This example demonstrates this pattern by defining two server actions, `listDogs` and `getDog` (located in [./app/actions.js](./app/actions.js)). These are then used throughout the application, in both [Client](./app/client-component.js) and [Server](./app/dogs/[id]/page.js) components!
