@@ -10,8 +10,8 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"@harperdb/nextjs": "^0.0.3",
-		"harperdb": "^4.3.33",
+		"@harperdb/nextjs": "^0.0.4",
+		"harperdb": "^4.4.5",
 		"next": "^14.2.16",
 		"react": "^18",
 		"react-dom": "^18"
