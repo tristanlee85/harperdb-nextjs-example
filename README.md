@@ -4,6 +4,9 @@ This is an example of how to use [`@harperdb/nextjs`](https://github.com/HarperD
 
 The Next.js application can interact with the database through the [Resource API](https://docs.harperdb.io/docs/technical-details/reference/resource) directly instead of relying on network operations. This is significantly more efficient and enables a better application development experience.
 
+> [!TIP]
+> Watch a walkthrough of this example here: [Next.js on HarperDB | Step-by-Step Guide for Next Level Next.js Performance](https://youtu.be/GqLEwteFJYY)
+
 ## Get Started
 
 1. Clone this repo locally
