@@ -6,3 +6,4 @@ jsResource:
   package: '@harperdb/nextjs'
   files: '/*'
   installCommand: 'npm install --loglevel=error'
+  buildCommand: 'npm run next build'
